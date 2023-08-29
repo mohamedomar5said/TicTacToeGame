@@ -78,3 +78,19 @@
    margin-left: 1em;
    cursor: pointer;
 }
+
+footer {
+   background-color: #333333;
+   color: white;
+   font-family: Arial, sans-serif;
+   font-size: 20px;
+   padding: 10px;
+   text-align: center;
+   background-image: linear-gradient(to right, rgb(36, 38, 44), rgb(19, 32, 39));
+
+}
+
+footer span {
+   color: red;
+   transition: .3s;
+}
