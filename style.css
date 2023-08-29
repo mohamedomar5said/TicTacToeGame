@@ -4,9 +4,11 @@
    box-sizing: border-box;
    font-family: 'Itim', cursive
 }
+body{
+      background-color: #121818;
 
+}
 .background {
-   background-color: #121818;
    min-height: 100vh;
    padding: 2px 15px;
 }
