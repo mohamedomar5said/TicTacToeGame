@@ -32,6 +32,7 @@ let computerTurn = false;
 
 const playerAudio = document.getElementById("playerAudio");
 const aiAudio = document.getElementById("aiAudio");
+const loseAudio = document.getElementById("loseAudio");
 
 
 startGame();
@@ -117,7 +118,7 @@ function gameOver(gameWon) {
    declareWinner(
       gameWon.player == humanPlayer ? 'you won' : 'you lose'
    );
-   gameWon.player == aiPlayer ? speak('you loose ..  haha haha haha   ....    did you like my laugh ?? ') : '';
+   gameWon.player == aiPlayer ? loseAudio.play() : '';
 }
 
 function emptyTiles() {
