@@ -4,10 +4,35 @@
    box-sizing: border-box;
    font-family: 'Itim', cursive
 }
-body{
-      background-color: #121818;
 
+body {
+   background-color: #121818;
+   position: relative;
 }
+
+
+header img {
+   width: 100px;
+   aspect-ratio: 1;
+   position: absolute;
+   left: 30px;
+   top: 30px;
+   border-radius: 50%;
+   transition: .5s;
+}
+
+header:hover img {
+   transform: rotate(360deg);
+   scale: 1.2;
+   border-radius: 30%;
+}
+
+@media (max-width:900px) {
+   header img {
+      display: none;
+   }
+}
+
 .background {
    min-height: 100vh;
    padding: 2px 15px;
@@ -18,6 +43,7 @@ body{
    text-align: center;
    font-size: 40px;
    margin-top: 5%;
+   margin-bottom: 15px;
 }
 
 .display {
@@ -50,7 +76,8 @@ body{
    font-size: 50px;
    cursor: pointer;
    color: white;
-   font-family: 'Times New Roman', Times, serif !important
+   font-family: 'Times New Roman', Times, serif !important;
+   position: relative;
 }
 
 .playerX {
@@ -88,7 +115,8 @@ footer {
    padding: 10px;
    text-align: center;
    background-image: linear-gradient(to right, rgb(36, 38, 44), rgb(19, 32, 39));
-margin-top:20px
+   margin-top: 20px;
+
 }
 
 footer span {
@@ -98,4 +126,42 @@ footer span {
 
 footer span:hover {
    transform: scale(1.1);
+}
+
+
+/*  hover effect  */
+.container:hover>.card::after {
+   opacity: 1;
+}
+
+
+.tile:hover::before {
+   opacity: 1;
+}
+
+.tile::before,
+.tile::after {
+   border-radius: inherit;
+   content: "";
+   height: 100%;
+   left: 0px;
+   opacity: 0;
+   position: absolute;
+   top: 0px;
+   transition: opacity 500ms;
+   width: 100%;
+}
+
+.tile::before {
+   background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+         rgba(255, 255, 255, 0.158),
+         transparent 40%);
+   z-index: 3;
+}
+
+.tile::after {
+   background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+         rgba(255, 255, 255, 0.295),
+         transparent 40%);
+   z-index: 1;
 }
