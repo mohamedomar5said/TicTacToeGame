@@ -117,7 +117,7 @@ function gameOver(gameWon) {
    declareWinner(
       gameWon.player == humanPlayer ? 'you won' : 'you lose'
    );
-   gameWon.player == aiPlayer ? speak('you lose .  hahahahahahaa hahahahahahaha  .  did you like my laugh ?? , or you didnt ??') : '';
+   gameWon.player == aiPlayer ? speak('you loose .  hahahahaha   ....    did you like my laugh ?? ') : '';
 }
 
 function emptyTiles() {
