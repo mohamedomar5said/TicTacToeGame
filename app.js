@@ -195,3 +195,27 @@ function minimax(newBoard, player) {
    return moves[bestmove];
 }
 
+
+
+
+
+
+
+function declareWinner(who) {
+   announcer.innerHTML = who;
+
+
+}
+
+resetBtn.addEventListener('click', reset);
+
+function reset() {
+   tiles.forEach((tale) => {
+      tale.innerText = '';
+      tale.style.backgroundColor = '#121818';
+   });
+   announcer.innerHTML = '';
+   startGame();
+}
+
+
