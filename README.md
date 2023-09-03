@@ -1,4 +1,4 @@
-**Tic Tac Toe Game**
+## **Tic Tac Toe Game**
 
 This repository contains a Tic Tac Toe game, currently designed for playing against the computer.
 While the code and project may appear unorganized at the moment, my primary focus was on ensuring the game functions correctly.
