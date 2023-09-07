@@ -75,7 +75,10 @@ function popup() {
 
    popup.append(div);
 
+  document.getElementById('user-name').addEventListener("keydown", function (e) {
+      if (e.key === "Enter") e.preventDefault();
 
+   });
 
    function closeThePopUp() {
       tiles.forEach((tile) => tile.style.zIndex = 1);
