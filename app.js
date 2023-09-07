@@ -324,9 +324,10 @@ function reset() {
    if (userStarts) {
       computerTurn = false;
    } else {
+        let randomMove = emptyTiles()[Math.floor(Math.random() * emptyTiles().length)];
       computerTurn = true;
       setTimeout(() => {
-         turn(bestSpot(), aiPlayer);
+         turn(randomMove, aiPlayer);
          aiAudio.play();
          computerTurn = false;
       });
