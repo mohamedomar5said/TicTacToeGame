@@ -2,12 +2,15 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: 'Itim', cursive
+   font-family: 'Itim', cursive;
 }
 
 body {
    background-color: #121818;
    position: relative;
+   overflow-x: hidden;
+   z-index: -3;
+
 }
 
 
@@ -42,8 +45,8 @@ header:hover img {
    color: white;
    text-align: center;
    font-size: 40px;
-   margin-top: 5%;
-   margin-bottom: 15px;
+   margin-top: 2%;
+   margin-bottom: 35px;
 }
 
 .display {
@@ -78,6 +81,8 @@ header:hover img {
    color: white;
    font-family: 'Times New Roman', Times, serif !important;
    position: relative;
+   z-index: -3;
+
 }
 
 .playerX {
@@ -88,6 +93,131 @@ header:hover img {
    color: #498AFB;
 }
 
+/* 
+both buttons */
+.swal-modal .swal-text,
+.swal-modal .swal-title {
+   color: black;
+}
+
+.swal-modal button {
+   /* set the width and height of the buttons */
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   font-size: 36px;
+   color: white;
+   cursor: pointer;
+   margin: 10px;
+   border: 1px solid #498AFB;
+   padding: 2px 8px;
+   margin: 20px 10px;
+   font-weight: bold;
+}
+
+/* define a class for the X button */
+.btnX {
+   /* set the background color of the X button to green */
+   background-color: green;
+}
+
+.btnO {
+   /* set the background color of the O button to blue */
+   background-color: rgb(0, 0, 255);
+}
+
+button {
+   transition: .3s;
+}
+
+button:hover {
+   box-shadow: 0 0 20px rgb(36, 35, 35);
+   transform: scale(1.1);
+}
+
+.swal-overlay {
+   pointer-events: none;
+   z-index: 1000;
+}
+
+
+.swal-overlay::after {
+   position: absolute;
+   content: '';
+   width: 100vw;
+   max-width: 100%;
+   height: 100vw;
+   max-height: 100%;
+   background-color: #22242480;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: -1;
+}
+
+button:active {
+   box-shadow: inset 0 0 10px black;
+}
+
+
+.scores {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-size: 18px;
+}
+
+.score {
+   margin: 10px;
+}
+
+.difficulty {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 16px;
+   color: white;
+   margin-bottom: 20px;
+
+
+}
+
+.difficulty h1 {
+   margin-right: 10px;
+}
+
+.chosen-level {
+   text-align: center;
+   margin-bottom: 20px;
+   color: rgb(255, 255, 255);
+
+}
+
+select {
+   padding: 10px;
+   font-size: 16px;
+   background-color: #222;
+   /* Dark background color */
+   color: #fff;
+   /* Text color */
+   border: none;
+   border-radius: 5px;
+   z-index: -3;
+
+
+   /* Remove default arrow on some browsers */
+}
+
+.score span {
+   display: block;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 10px 5px;
+}
+
 .controls {
    display: flex;
    flex-direction: row;
@@ -96,7 +226,8 @@ header:hover img {
    margin-top: 1em;
 }
 
-#reset {
+#reset,
+#new-game {
    background-color: red;
    color: white;
    padding: 4px 14px;
