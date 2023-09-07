@@ -47,14 +47,7 @@ function popup() {
       text: "Do you want to play as X or O?",
       buttons: false,
       allowOutsideClick: false,
-      content: {
-         element: "input",
-         attributes: {
-            placeholder: "Your name",
-            type: "text", // Specify the input type
-            id: 'user-name'
-         },
-      },
+  
    });
 
    let buttonX = document.createElement('button');
@@ -75,16 +68,12 @@ function popup() {
 
    popup.append(div);
 
-  document.getElementById('user-name').addEventListener("keydown", function (e) {
-      if (e.key === "Enter") e.preventDefault();
-
-   });
 
    function closeThePopUp() {
       tiles.forEach((tile) => tile.style.zIndex = 1);
       document.getElementById('difficultySelect').style.zIndex = 1;
       playerDisplay.innerText = humanPlayer;
-      speak(`hello ${document.getElementById('user-name').value} , let's play`);
+      speak(`hello let's play`);
       swal.close();
    }
 
