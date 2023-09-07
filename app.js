@@ -237,7 +237,7 @@ function bestSpot() {
    }
 
    if (selectedDifficulty === 'medium') {
-      if (Math.random() < 0.3) {
+      if (Math.random() < 0.2) {
          return emptyTiles()[Math.floor(Math.random() * emptyTiles().length)];
       }
    }
